@@ -12,13 +12,8 @@ version: v1
        application/json:
         type: |
           {
-<<<<<<< HEAD
             "type" : "object",
             "required" : true,
-=======
-            "type" : "object"
-            "required" : true
->>>>>>> ab50641be4efd51f23af8641e072d9f2b16df0f6
             "propiedades": {
               "usuario": {
                 "type": "string",
@@ -30,11 +25,7 @@ version: v1
           }
         example: |
           {
-<<<<<<< HEAD
             "usuario": "elpapurris",
-=======
-            "usuario": "elpapurris"
->>>>>>> ab50641be4efd51f23af8641e072d9f2b16df0f6
             "password": "unamuysegura321"
           }
       responses:
@@ -52,17 +43,13 @@ version: v1
                   },
                   "success": true,
                   "status": 200
-                },
+                }
         404:
           body:
             application/json:
               example: |
                 {
-<<<<<<< HEAD
                   "status": 404,
-=======
-                  "status": 404
->>>>>>> ab50641be4efd51f23af8641e072d9f2b16df0f6
                   "message": "Usuario no encontrado"
                 }
 /cursos:
