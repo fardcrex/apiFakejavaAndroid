@@ -9,21 +9,7 @@ version: v1
     post:
       description: trae los datos del usuario
       body: 
-        application/json:
-          type: |
-            {
-              "type" : "object",
-              "required" : true,
-              "propiedades": {
-                "usuario": {
-                  "type": "string",
-                  "required": true
-                },
-                "password": {
-                  "type": "string",
-                  "required": true
-                }
-            }
+        application/json:        
           example: |
             {
               "usuario": "elpapurris",
@@ -35,7 +21,8 @@ version: v1
             application/json:
               example: |
                 {
-                  "data": {
+                  "data": 
+                  {
                     "id_usuario": 2,
                     "nombre": "Jacobo",
                     "email": "Jacobo_9410@hotmail.com",
