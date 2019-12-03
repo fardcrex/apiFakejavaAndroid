@@ -12,8 +12,8 @@ version: v1
        application/json:
         type: |
           {
-            "type" : "object"
-            "required" : true
+            "type" : "object",
+            "required" : true,
             "propiedades": {
               "usuario": {
                 "type": "string",
@@ -25,7 +25,7 @@ version: v1
           }
         example: |
           {
-            "usuario": "elpapurris"
+            "usuario": "elpapurris",
             "password": "unamuysegura321"
           }
       responses:
@@ -49,7 +49,7 @@ version: v1
             application/json:
               example: |
                 {
-                  "status": 404
+                  "status": 404,
                   "message": "Usuario no encontrado"
                 }
 /cursos:
