@@ -9,26 +9,26 @@ version: v1
     post:
       description: trae los datos del usuario
       body: 
-       application/json:
-        type: |
-          {
-            "type" : "object",
-            "required" : true,
-            "propiedades": {
-              "usuario": {
-                "type": "string",
-                "required": true
-              },
-              "password": {
-                "type": "string",
-                "required": true
-              }
-          }
-        example: |
-          {
-            "usuario": "elpapurris",
-            "password": "unamuysegura321"
-          }
+        application/json:
+          type: |
+            {
+              "type" : "object",
+              "required" : true,
+              "propiedades": {
+                "usuario": {
+                  "type": "string",
+                  "required": true
+                },
+                "password": {
+                  "type": "string",
+                  "required": true
+                }
+            }
+          example: |
+            {
+              "usuario": "elpapurris",
+              "password": "unamuysegura321"
+            }
       responses:
         200:
           body:
