@@ -4,39 +4,53 @@ title: webServicesAndroid
 baseUri: http://192.168.0.29:5051/{version}
 version: v1
 
-/imagenes:  
-  get:
-    description: Retrieve a specific book title
-    responses:
-      200:
-        body:
-          application/json:
-            example: |
-              [
+/usuario:
+  /login:
+    post:
+      description: trae los datos del usuario
+      body: 
+       application/json:
+        type: |
+          {
+            "type" : "object"
+            "required" : true
+            "propiedades": {
+              "usuario": {
+                "type": "string",
+                "required": true
+              },
+              "password": {
+                "type": "string",
+                "required": true
+          }
+        example: |
+          {
+            "usuario": "elpapurris"
+            "password": "unamuysegura321"
+          }
+      responses:
+        200:
+          body:
+            application/json:
+              example: |
                 {
                   "data": {
-                    "id": "SbBGk",
-                    "title": "Stiff: The Curious Lives of Human Cadavers",
-                    "description": null,
-                    "datetime": 1341533193,
-                    "genre": "science",
-                    "author": "Mary Roach",
-                    "link": "http://e-bookmobile.com/books/Stiff"
+                    "id_usuario": "2",
+                    "nombre": "Jacobo",
+                    "email": "Jacobo_9410@hotmail.com",
+                    "imgURL": "https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg",
+                    "token": "sdfgsSDF2SD5FSDFDSFSDFSDFSDFS5DFSDFS.SDF5SDFSD8FSDFSDF.SDFSDFSDFSDF",                    
                   },
                   "success": true,
                   "status": 200
                 },
+        404:
+          body:
+            application/json:
+              example: |
                 {
-                  "data": {
-                    "id": "SbBGk",
-                    "title": "Stiff: The Curious Lives of Human Cadavers",
-                    "description": "el capo de los capos",
-                    "datetime": 1341533193,
-                    "genre": "science",
-                    "author": "Mary Roach",
-                    "link": "http://e-bookmobile.com/books/Stiff"
-                  },
-                  "success": true,
-                  "status": 200
+                  "status": 404
+                  "message": "Usuario no encontrado"
                 }
-              ]
+/cursos:
+/imagenes:
